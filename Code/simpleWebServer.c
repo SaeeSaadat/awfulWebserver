@@ -90,13 +90,13 @@ int main(int argc, char *argv[])
 
 		if(!strncmp(buf, "GET /irFlag.png", 15))
 		{
-			fdimg = open("irFlag.png", O_RDONLY);
+			fdimg = open("../Resources/irFlag.png", O_RDONLY);
 			sendfile(fd_client, fdimg, NULL, 200000);
 			close(fdimg);
 		}
 		else if(!strncmp(buf, "GET /fetr.jpg", 13))
 		{
-			fdimg = open("fetr.jpg", O_RDONLY);
+			fdimg = open("../Resources/fetr.jpg", O_RDONLY);
 			sendfile(fd_client, fdimg, NULL, 60000);
 			close(fdimg);	
 		}
